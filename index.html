@@ -5,42 +5,55 @@
   <title>SCR-E String Function</title>
 
   <!-- CSS styles for the webpage -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+<style>
+  body {
+    font-family: "Alegreya Sans SC", sans-serif;
+    text-align: center;
+    background-color: #474747;
+    color: #d1c7ac;
+  }
 
-    input {
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
+  h1 {
+    margin-top: 0;
+    color: #8c8c8c;
+  }
 
-    button {
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-      background-color: #eee;
-      cursor: pointer;
-    }
+  input {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #474747;
+    width: 500px;
+  }
 
-    button:hover {
-      background-color: #ccc;
-    }
+  button {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #474747;
+    background-color: #474747;
+    color: #d1c7ac;
+    cursor: pointer;
+  }
 
-    #output {
-      font-size: 20px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-      margin-top: 10px;
-    }
+  button:hover {
+    background-color: #8c8c8c;
+  }
+
+  #output {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #474747;
+    margin-top: 20px;
+  }
+</style>
   </style>
 </head>
 <body>
   <h1>Goblin Translator</h1>
+    <!--Add the gif from local file system called gob_glitch.gif here, round corners-->
+    <img src="gob_glitch.gif" alt="Goblin Glitching" width="500" height="500" style="border-radius: 10px;">
   <p>Enter a string in the input box below and your message will be translated to Goblin:</p>
 
   <input type="text" id="input-string" oninput="scrEString()">
