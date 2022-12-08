@@ -1,0 +1,77 @@
+<!-- HTML code for the webpage -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SCR-E String Function</title>
+
+  <!-- CSS styles for the webpage -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    input {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+
+    #output {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Goblin Translator</h1>
+  <p>Enter a string in the input box below and your message will be translated to Goblin:</p>
+
+  <input type="text" id="input-string" oninput="scrEString()">
+
+  <h2>Output:</h2>
+  <p id="output"></p>
+
+  <!-- JavaScript code for the webpage -->
+  <script>
+    // Define the scr_e_string function
+    function scr_e_string(input_string) {
+      // Get the length of the input string
+      let length = input_string.length;
+
+      // Create a new string with 'scr' as the first three letters and 'e' for the rest of the string
+      let new_string = 'scr' + 'e'.repeat(length - 3);
+
+      return new_string;
+    }
+
+    // Define the scrEString function that is called when the input string is changed
+    function scrEString() {
+      // Get the value of the input string from the input box
+      let inputString = document.getElementById('input-string').value;
+
+      // Call the scr_e_string function with the input string and get the output string
+      let outputString = scr_e_string(inputString);
+
+      // Set the text of the output element to the output string
+      document.getElementById('output').innerText = outputString.toUpperCase();
+    }
+  </script>
+</body>
+</html>
